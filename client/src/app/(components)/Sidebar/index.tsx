@@ -78,8 +78,8 @@ const Sidebar = () => {
       >
         <div className="relative w-8 h-8">
           <Image
-            src="https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/logo.png"
-            alt="edstock-logo"
+            src="https://placehold.co/40x40/6366f1/ffffff.png?text=I"
+            alt="inventory-logo"
             fill
             className="rounded object-contain"
           />
@@ -88,7 +88,7 @@ const Sidebar = () => {
           className={`${isSidebarCollapsed ? "hidden" : "block"
             } font-extrabold text-2xl text-gray-100 tracking-wide`}
         >
-          EDSTOCK
+          INVENTORY
         </h1>
 
         <button

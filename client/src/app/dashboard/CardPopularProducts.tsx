@@ -25,8 +25,7 @@ const CardPopularProducts = () => {
               >
                 <div className="flex items-center gap-3">
                   <Image
-                    src={`https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/product${Math.floor(Math.random() * 3) + 1
-                      }.png`}
+                    src={`https://placehold.co/50x50/3b82f6/ffffff.png?text=${product.name.substring(0, 3)}`}
                     alt={product.name}
                     width={48}
                     height={48}

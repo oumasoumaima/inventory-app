@@ -82,8 +82,7 @@ const Products = () => {
               <div className="flex flex-col items-center">
                 <div className="relative w-36 h-36 mb-3">
                   <Image
-                    src={`https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/product${Math.floor(Math.random() * 3) + 1
-                      }.png`}
+                    src={`https://placehold.co/150x150/10b981/ffffff.png?text=${product.name.substring(0, 3)}`}
                     alt={product.name}
                     fill
                     className="rounded-2xl object-cover"
