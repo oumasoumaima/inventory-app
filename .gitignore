@@ -1,7 +1,27 @@
-client/node_modules/
-server/node_modules/
-client/dist/
-server/dist/
-client/.env/
-server/.env/
+# Dependencies
+**/node_modules
+**/npm-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+
+# Next.js
 client/.next/
+client/out/
+client/build/
+client/dist/
+
+# Server
+server/dist/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+**/.env.*
+
+# OS
+.DS_Store
+Thumbs.db
