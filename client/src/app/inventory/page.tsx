@@ -52,7 +52,7 @@ const Inventory = () => {
         columns={columns}
         getRowId={(row) => row.productId}
         checkboxSelection
-        className="glass-panel mt-5 !text-gray-200 border-none"
+        className="glass-panel mt-5 border-none"
       />
     </div>
   );

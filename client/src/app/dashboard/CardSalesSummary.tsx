@@ -49,18 +49,18 @@ const CardSalesSummary = () => {
         <>
           {/* HEADER */}
           <div>
-            <h2 className="text-lg font-semibold mb-2 px-7 pt-5 text-gray-100">
+            <h2 className="text-lg font-semibold mb-2 px-7 pt-5 text-black dark:text-white">
               Sales Summary
             </h2>
-            <hr className="border-gray-700" />
+            <hr className="border-gray-200 dark:border-gray-700" />
           </div>
 
           {/* BODY */}
           <div>
             {/* BODY HEADER */}
             <div className="flex justify-between items-center mb-6 px-7 mt-5">
-              <div className="text-lg font-medium text-gray-100">
-                <p className="text-xs text-gray-400">Value</p>
+              <div className="text-lg font-medium text-black dark:text-white">
+                <p className="text-xs text-gray-500 dark:text-gray-400">Value</p>
                 <span className="text-2xl font-extrabold">
                   $
                   {(totalValueSum / 1000000).toLocaleString("en", {
@@ -74,7 +74,7 @@ const CardSalesSummary = () => {
                 </span>
               </div>
               <select
-                className="shadow-sm border border-gray-700 bg-dark-bg text-gray-200 p-2 rounded focus:outline-none focus:border-primary-500"
+                className="shadow-sm border border-gray-300 bg-white text-gray-700 p-2 rounded focus:outline-none focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 value={timeframe}
                 onChange={(e) => {
                   setTimeframe(e.target.value);
@@ -91,27 +91,27 @@ const CardSalesSummary = () => {
                 data={salesData}
                 margin={{ top: 0, right: 0, left: -25, bottom: 0 }}
               >
-                <CartesianGrid strokeDasharray="" vertical={false} stroke="#334155" />
+                <CartesianGrid strokeDasharray="" vertical={false} stroke="#e2e8f0" />
                 <XAxis
                   dataKey="date"
                   tickFormatter={(value) => {
                     const date = new Date(value);
                     return `${date.getMonth() + 1}/${date.getDate()}`;
                   }}
-                  tick={{ fill: "#94a3b8" }}
+                  tick={{ fill: "#64748b" }}
                   axisLine={false}
                 />
                 <YAxis
                   tickFormatter={(value) => {
                     return `$${(value / 1000000).toFixed(0)}m`;
                   }}
-                  tick={{ fontSize: 12, dx: -1, fill: "#94a3b8" }}
+                  tick={{ fontSize: 12, dx: -1, fill: "#64748b" }}
                   tickLine={false}
                   axisLine={false}
                 />
                 <Tooltip
-                  cursor={{ fill: '#1e293b' }}
-                  contentStyle={{ backgroundColor: "#1e293b", borderColor: "#334155", color: "#f8fafc" }}
+                  cursor={{ fill: '#f1f5f9' }}
+                  contentStyle={{ backgroundColor: "#ffffff", borderColor: "#eff6ff", color: "#1e293b" }}
                   formatter={(value: number) => [
                     `$${value.toLocaleString("en")}`,
                   ]}
@@ -136,12 +136,12 @@ const CardSalesSummary = () => {
 
           {/* FOOTER */}
           <div>
-            <hr className="border-gray-700" />
-            <div className="flex justify-between items-center mt-6 text-sm px-7 mb-4 text-gray-300">
+            <hr className="border-gray-200 dark:border-gray-700" />
+            <div className="flex justify-between items-center mt-6 text-sm px-7 mb-4 text-gray-500 dark:text-gray-400">
               <p>{salesData.length || 0} days</p>
               <p className="text-sm">
                 Highest Sales Date:{" "}
-                <span className="font-bold text-gray-100">{highestValueDate}</span>
+                <span className="font-bold text-black dark:text-white">{highestValueDate}</span>
               </p>
             </div>
           </div>

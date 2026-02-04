@@ -71,9 +71,9 @@ const Expenses = () => {
   }, [expenses, selectedCategory, startDate, endDate]);
 
   const classNames = {
-    label: "block text-sm font-medium text-gray-300",
+    label: "block text-sm font-medium text-gray-800 dark:text-gray-100",
     selectInput:
-      "mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-700 focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md bg-dark-bg text-white",
+      "mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:ring-primary-500 focus:border-primary-500 sm:text-sm rounded-md bg-white text-black dark:bg-gray-700 dark:text-white dark:border-gray-600",
   };
 
   if (isLoading) {
@@ -100,8 +100,8 @@ const Expenses = () => {
 
       {/* FILTERS */}
       <div className="flex flex-col md:flex-row justify-between gap-4">
-        <div className="w-full md:w-1/3 glass-panel p-6 shadow-xl">
-          <h3 className="text-lg font-semibold mb-4 text-gray-100">
+        <div className="w-full md:w-1/3 glass-panel p-6 shadow-md">
+          <h3 className="text-lg font-semibold mb-4 text-black dark:text-white">
             Filter by Category and Date
           </h3>
           <div className="space-y-4">
@@ -152,7 +152,7 @@ const Expenses = () => {
           </div>
         </div>
         {/* PIE CHART */}
-        <div className="flex-grow glass-panel p-4 md:p-6 shadow-xl">
+        <div className="flex-grow glass-panel p-4 md:p-6 shadow-md">
           <ResponsiveContainer width="100%" height={400}>
             <PieChart>
               <Pie
@@ -178,7 +178,7 @@ const Expenses = () => {
                 )}
               </Pie>
               <Tooltip
-                contentStyle={{ backgroundColor: "#1e293b", borderColor: "#334155", color: "#f8fafc" }}
+                contentStyle={{ backgroundColor: "#ffffff", borderColor: "#eff6ff", color: "#1e293b" }}
               />
               <Legend />
             </PieChart>

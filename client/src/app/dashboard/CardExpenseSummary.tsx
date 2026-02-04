@@ -51,10 +51,10 @@ const CardExpenseSummary = () => {
         <>
           {/* HEADER */}
           <div>
-            <h2 className="text-lg font-semibold mb-2 px-7 pt-5 text-gray-100">
+            <h2 className="text-lg font-semibold mb-2 px-7 pt-5 text-black dark:text-white">
               Expense Summary
             </h2>
-            <hr className="border-gray-700" />
+            <hr className="border-gray-200 dark:border-gray-700" />
           </div>
           {/* BODY */}
           <div className="xl:flex justify-between pr-7">
@@ -82,7 +82,7 @@ const CardExpenseSummary = () => {
                 </PieChart>
               </ResponsiveContainer>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center basis-2/5">
-                <span className="font-bold text-xl text-gray-100">
+                <span className="font-bold text-xl text-black dark:text-white">
                   ${formattedTotalExpenses}
                 </span>
               </div>
@@ -92,7 +92,7 @@ const CardExpenseSummary = () => {
               {expenseCategories.map((entry, index) => (
                 <li
                   key={`legend-${index}`}
-                  className="flex items-center text-xs text-gray-300"
+                  className="flex items-center text-xs text-gray-800 dark:text-gray-300"
                 >
                   <span
                     className="mr-2 w-3 h-3 rounded-full"
@@ -105,18 +105,18 @@ const CardExpenseSummary = () => {
           </div>
           {/* FOOTER */}
           <div>
-            <hr className="border-gray-700" />
+            <hr className="border-gray-200 dark:border-gray-700" />
             {expenseSummary && (
               <div className="mt-3 flex justify-between items-center px-7 mb-4">
                 <div className="pt-2">
-                  <p className="text-sm text-gray-300">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
                     Average:{" "}
-                    <span className="font-semibold text-gray-100">
+                    <span className="font-semibold text-gray-800 dark:text-gray-200">
                       ${expenseSummary.totalExpenses.toFixed(2)}
                     </span>
                   </p>
                 </div>
-                <span className="flex items-center mt-2 text-gray-300">
+                <span className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
                   <TrendingUp className="mr-2 text-emerald-500" />
                   30%
                 </span>

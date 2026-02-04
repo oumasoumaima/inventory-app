@@ -27,7 +27,7 @@ const Navbar = () => {
       {/* LEFT SIDE */}
       <div className="flex justify-between items-center gap-5">
         <button
-          className="px-3 py-3 bg-dark-surface rounded-full hover:bg-primary-700 text-gray-200"
+          className="px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100 text-gray-500"
           onClick={toggleSidebar}
         >
           <Menu className="w-4 h-4" />
@@ -37,7 +37,7 @@ const Navbar = () => {
           <input
             type="search"
             placeholder="Search..."
-            className="pl-10 pr-4 py-2 w-50 md:w-60 border border-dark-border bg-dark-surface rounded-lg focus:outline-none focus:border-primary-500 text-white placeholder-gray-500"
+            className="pl-10 pr-4 py-2 w-50 md:w-60 border border-gray-300 bg-white rounded-lg focus:outline-none focus:border-primary-500 text-black placeholder-gray-500 shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-300"
           />
 
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -52,33 +52,33 @@ const Navbar = () => {
           <div>
             <button onClick={toggleDarkMode}>
               {isDarkMode ? (
-                <Sun className="cursor-pointer text-gray-400 hover:text-white" size={24} />
+                <Sun className="cursor-pointer text-gray-500 hover:text-gray-700" size={24} />
               ) : (
-                <Moon className="cursor-pointer text-gray-400 hover:text-white" size={24} />
+                <Moon className="cursor-pointer text-gray-500 hover:text-gray-700" size={24} />
               )}
             </button>
           </div>
           <div className="relative">
-            <Bell className="cursor-pointer text-gray-400 hover:text-white" size={24} />
+            <Bell className="cursor-pointer text-gray-500 hover:text-gray-700" size={24} />
             <span className="absolute -top-2 -right-2 inline-flex items-center justify-center px-[0.4rem] py-1 text-xs font-semibold leading-none text-white bg-red-500 rounded-full">
               3
             </span>
           </div>
-          <hr className="w-0 h-7 border border-solid border-l border-gray-600 mx-3" />
+          <hr className="w-0 h-7 border border-solid border-l border-gray-300 mx-3" />
           <div className="flex items-center gap-3 cursor-pointer">
             <div className="w-9 h-9 relative">
               <Image
-                src="https://placehold.co/40x40/f43f5e/ffffff.png?text=U"
+                src="/profile.jpg"
                 alt="Profile"
                 fill
                 className="rounded-full object-cover"
               />
             </div>
-            <span className="font-semibold text-gray-200">Ed Roh</span>
+            <span className="font-semibold text-gray-700 dark:text-gray-200">Ed Roh</span>
           </div>
         </div>
         <Link href="/settings">
-          <Settings className="cursor-pointer text-gray-400 hover:text-white" size={24} />
+          <Settings className="cursor-pointer text-gray-500 hover:text-gray-700" size={24} />
         </Link>
       </div>
     </div>

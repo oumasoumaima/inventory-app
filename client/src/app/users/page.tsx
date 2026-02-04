@@ -31,7 +31,7 @@ const Users = () => {
         columns={columns}
         getRowId={(row) => row.userId}
         checkboxSelection
-        className="glass-panel mt-5 !text-gray-200 border-none"
+        className="glass-panel mt-5 border-none"
       />
     </div>
   );

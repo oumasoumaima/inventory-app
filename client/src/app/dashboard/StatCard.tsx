@@ -34,23 +34,23 @@ const StatCard = ({
       {/* HEADER */}
       <div>
         <div className="flex justify-between items-center mb-2 px-5 pt-4">
-          <h2 className="font-semibold text-lg text-gray-100">{title}</h2>
-          <span className="text-xs text-gray-400">{dateRange}</span>
+          <h2 className="font-semibold text-lg text-black dark:text-white">{title}</h2>
+          <span className="text-xs text-gray-500 dark:text-gray-400">{dateRange}</span>
         </div>
-        <hr className="border-gray-700" />
+        <hr className="border-gray-200 dark:border-gray-700" />
       </div>
 
       {/* BODY */}
       <div className="flex mb-6 items-center justify-around gap-4 px-5">
-        <div className="rounded-full p-5 bg-primary-900/50 border-primary-500/20 border-[1px]">
+        <div className="rounded-full p-5 bg-primary-100 border-primary-200 border-[1px] text-primary-700">
           {primaryIcon}
         </div>
         <div className="flex-1">
           {details.map((detail, index) => (
             <React.Fragment key={index}>
               <div className="flex items-center justify-between my-4">
-                <span className="text-gray-400">{detail.title}</span>
-                <span className="font-bold text-gray-200">{detail.amount}</span>
+                <span className="text-gray-600 dark:text-gray-400">{detail.title}</span>
+                <span className="font-bold text-black dark:text-gray-200">{detail.amount}</span>
                 <div className="flex items-center">
                   <detail.IconComponent
                     className={`w-4 h-4 mr-1 ${getChangeColor(
@@ -67,7 +67,7 @@ const StatCard = ({
                   </span>
                 </div>
               </div>
-              {index < details.length - 1 && <hr className="border-gray-700" />}
+              {index < details.length - 1 && <hr className="border-gray-200 dark:border-gray-700" />}
             </React.Fragment>
           ))}
         </div>

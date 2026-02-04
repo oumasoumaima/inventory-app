@@ -25,19 +25,19 @@ const CardPurchaseSummary = () => {
         <>
           {/* HEADER */}
           <div>
-            <h2 className="text-lg font-semibold mb-2 px-7 pt-5 text-gray-100">
+            <h2 className="text-lg font-semibold mb-2 px-7 pt-5 text-black dark:text-white">
               Purchase Summary
             </h2>
-            <hr className="border-gray-700" />
+            <hr className="border-gray-200 dark:border-gray-700" />
           </div>
 
           {/* BODY */}
           <div>
             {/* BODY HEADER */}
             <div className="mb-4 mt-7 px-7">
-              <p className="text-xs text-gray-400">Purchased</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">Purchased</p>
               <div className="flex items-center">
-                <p className="text-2xl font-bold text-gray-100">
+                <p className="text-2xl font-bold text-black dark:text-white">
                   {lastDataPoint
                     ? numeral(lastDataPoint.totalPurchased).format("$0.00a")
                     : "0"}
@@ -45,8 +45,8 @@ const CardPurchaseSummary = () => {
                 {lastDataPoint && (
                   <p
                     className={`text-sm ${lastDataPoint.changePercentage! >= 0
-                        ? "text-emerald-500"
-                        : "text-red-500"
+                      ? "text-emerald-500"
+                      : "text-red-500"
                       } flex ml-3`}
                   >
                     {lastDataPoint.changePercentage! >= 0 ? (
@@ -68,7 +68,7 @@ const CardPurchaseSummary = () => {
                 <XAxis dataKey="date" tick={false} axisLine={false} />
                 <YAxis tickLine={false} tick={false} axisLine={false} />
                 <Tooltip
-                  contentStyle={{ backgroundColor: "#1e293b", borderColor: "#334155", color: "#f8fafc" }}
+                  contentStyle={{ backgroundColor: "#ffffff", borderColor: "#eff6ff", color: "#1e293b" }}
                   formatter={(value: number) => [
                     `$${value.toLocaleString("en")}`,
                   ]}

@@ -39,15 +39,14 @@ const SidebarLink = ({
       <div
         className={`cursor-pointer flex items-center ${isCollapsed ? "justify-center py-4" : "justify-start px-8 py-4"
           }
-        hover:text-white hover:bg-primary-700 gap-3 transition-colors ${isActive ? "bg-primary-800 text-white" : "text-gray-300"
+        hover:text-primary-500 hover:bg-primary-50 gap-3 transition-colors ${isActive ? "bg-primary-100 text-primary-600" : "text-gray-600"
           }
       }`}
       >
-        <Icon className="w-6 h-6 !text-inherit" />
-
+        <Icon className="w-6 h-6 !text-gray-900 dark:!text-gray-100" />
         <span
           className={`${isCollapsed ? "hidden" : "block"
-            } font-medium text-inherit`}
+            } font-medium text-gray-900 dark:text-gray-100`}
         >
           {label}
         </span>
@@ -67,7 +66,7 @@ const Sidebar = () => {
   };
 
   const sidebarClassNames = `fixed flex flex-col ${isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"
-    } bg-dark-surface transition-all duration-300 overflow-hidden h-full shadow-lg z-40 border-r border-dark-border`;
+    } bg-white dark:bg-gray-900 transition-all duration-300 overflow-hidden h-full shadow-md z-40 border-r border-gray-200 dark:border-gray-700`;
 
   return (
     <div className={sidebarClassNames}>
@@ -78,7 +77,7 @@ const Sidebar = () => {
       >
         <div className="relative w-8 h-8">
           <Image
-            src="https://placehold.co/40x40/6366f1/ffffff.png?text=I"
+            src="/logo.png"
             alt="inventory-logo"
             fill
             className="rounded object-contain"
@@ -86,13 +85,13 @@ const Sidebar = () => {
         </div>
         <h1
           className={`${isSidebarCollapsed ? "hidden" : "block"
-            } font-extrabold text-2xl text-gray-100 tracking-wide`}
+            } font-extrabold text-2xl text-black dark:text-white tracking-wide`}
         >
           INVENTORY
         </h1>
 
         <button
-          className="md:hidden px-3 py-3 bg-dark-bg rounded-full hover:bg-primary-700 text-white"
+          className="md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100 text-gray-500"
           onClick={toggleSidebar}
         >
           <Menu className="w-4 h-4" />
@@ -141,7 +140,7 @@ const Sidebar = () => {
 
       {/* FOOTER */}
       <div className={`${isSidebarCollapsed ? "hidden" : "block"} mb-10`}>
-        <p className="text-center text-xs text-gray-400">&copy; 2024 Edstock</p>
+        <p className="text-center text-xs text-gray-500">&copy; 2026 Inventory</p>
       </div>
     </div>
   );

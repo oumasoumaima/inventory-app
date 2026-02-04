@@ -15,48 +15,44 @@ body,
   height: 100%;
   width: 100%;
   @apply text-sm;
-  @apply bg-slate-900;
-  /* Dark mode default */
-  @apply text-gray-100;
+  @apply bg-gray-50;
+  @apply text-black;
 }
 
 @layer utilities {
   .glass-panel {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-md rounded-2xl;
   }
 
   .glass-card {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm rounded-xl;
   }
 }
 
-/* MUI DataGrid Overrides */
+/* MUI DataGrid Overrides for Light Theme */
 .MuiDataGrid-root {
-  @apply border-dark-border bg-dark-surface text-gray-200 !important;
+  @apply border-gray-200 bg-white text-gray-700 dark:bg-gray-800 dark:text-gray-200 !important;
   border: none !important;
 }
 
 .MuiDataGrid-cell {
-  @apply border-dark-border !important;
+  @apply border-gray-200 dark:border-gray-700 !important;
 }
 
 .MuiDataGrid-columnHeaders {
-  @apply bg-dark-bg border-dark-border text-gray-100 uppercase tracking-wider !important;
+  @apply bg-gray-50 border-gray-200 text-gray-700 font-semibold uppercase tracking-wider dark:bg-gray-800 dark:text-gray-200 dark:border-gray-700 !important;
 }
 
 .MuiDataGrid-row:hover {
-  @apply bg-primary-900/40 !important;
+  @apply bg-gray-100 dark:bg-gray-700 !important;
 }
 
 .MuiTablePagination-root {
-  @apply text-gray-300 !important;
+  @apply text-gray-600 dark:text-gray-300 !important;
 }
 
 .MuiDataGrid-footerContainer {
-  @apply border-dark-border !important;
+  @apply border-gray-200 dark:border-gray-700 !important;
 }
 
 
