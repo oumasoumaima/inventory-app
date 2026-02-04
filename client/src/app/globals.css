@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  @apply text-sm;
+  @apply bg-slate-900;
+  /* Dark mode default */
+  @apply text-gray-100;
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+}
+
+/* MUI DataGrid Overrides */
+.MuiDataGrid-root {
+  @apply border-dark-border bg-dark-surface text-gray-200 !important;
+  border: none !important;
+}
+
+.MuiDataGrid-cell {
+  @apply border-dark-border !important;
+}
+
+.MuiDataGrid-columnHeaders {
+  @apply bg-dark-bg border-dark-border text-gray-100 uppercase tracking-wider !important;
+}
+
+.MuiDataGrid-row:hover {
+  @apply bg-primary-900/40 !important;
+}
+
+.MuiTablePagination-root {
+  @apply text-gray-300 !important;
+}
+
+.MuiDataGrid-footerContainer {
+  @apply border-dark-border !important;
+}
+
+
+@media (min-width: 768px) {
+  .custom-grid-rows {
+    grid-template-rows: repeat(8, 20vh);
+  }
+}
+
+@media (min-width: 1280px) {
+  .custom-grid-rows {
+    grid-template-rows: repeat(8, 7.5vh);
+  }
+}
