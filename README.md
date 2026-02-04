@@ -34,7 +34,3 @@ This is a comprehensive full-stack **Inventory Management Dashboard** designed t
 ## Copyright
 
 &copy; 2026 Inventory Management. All rights reserved.
-<<<<<<< HEAD
-=======
-
->>>>>>> b0a68f0f76914f531d2cc3f440b657bef419b187
